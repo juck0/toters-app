@@ -29,6 +29,7 @@ class _DetilesState extends State<Detiles> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+
       body: Column(
           children: [
             Column(

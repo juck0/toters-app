@@ -715,34 +715,38 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           )),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.white,
-        currentIndex: 4,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline_rounded, color: Colors.black12),
-            label: 'حساب',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.list_alt, color: Colors.black12),
-            label: 'طلبات',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home, color: Colors.black12),
-            label: 'المندوب',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search_outlined, color: Colors.black12),
-            label: 'بحث',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home, color: Colors.green),
-            label: 'رئيسية',
-          ),
-        ],
-        selectedItemColor: Colors.white,
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //
+      //   type: BottomNavigationBarType.fixed,
+      //   backgroundColor: Colors.white,
+      //   currentIndex: 4,
+      //   items: <BottomNavigationBarItem>[
+      //
+      //
+      //
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.person_outline_rounded, color: Colors.black12),
+      //       label: 'حساب',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.list_alt, color: Colors.black12),
+      //       label: 'طلبات',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.home, color: Colors.black12),
+      //       label: 'المندوب',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.search_outlined, color: Colors.black12),
+      //       label: 'بحث',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.home, color: Colors.green),
+      //       label: 'رئيسية',
+      //     ),
+      //   ],
+      //   selectedItemColor: Colors.white,
+      // ),
     );
   }
 
