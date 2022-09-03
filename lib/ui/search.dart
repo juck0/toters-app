@@ -22,19 +22,17 @@ class _SearchState extends State<Search> {
                   Text("Search for store or item",style: TextStyle(color: Colors.grey),)
                 ],),)),
             ),
-
-
           Container(width: MediaQuery.of(context).size.width,
           height:  MediaQuery.of(context).size.height-63,
           child:ListView(children: [
-            Container(width: 400,height: 100,color: Color(0xFF02AD8B),
+            Container(width: MediaQuery.of(context).size.width,
+              height: 100,color: Color(0xFF02AD8B),
               child:Padding(padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-
-                    Image(image: NetworkImage("https://cdn.iconfinder.com/icons/6080161/6558349/256/raster.png?token=1661863686-6llmK8%2FHxvCD2tEzReP35vBZhh%2FpY7M%2F3394roaN%2Ftc%3D",scale: 3)),
+                    Image(image: NetworkImage("https://cdn.iconfinder.com/icons/489652/900916/256/raster.png?token=1662210212-4uhfdDpmk6zDZGLGdlR6WmOdvDCr9l7JItaK0m283AM%3D",scale: 3)),
                     SizedBox(width: 20,),
                     Column(mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -63,42 +61,42 @@ class _SearchState extends State<Search> {
                 "Weekly Discounts 🗓",
                 "Get happy with up to 50% OFF from",
                 "select stores before 7 PM!",
-                34
+                64
             ),SizedBox(height: 30,),
             card(
                 "images/3.jpg",
-                "Happy Hour 🤩",
+                "Cashback 💰",
                 "Get happy with up to 50% OFF from",
                 "select stores before 7 PM!",
-                34
+                29
             ),SizedBox(height: 30,),
             card(
                 "images/4.jpg",
-                "Happy Hour 🤩",
+                "Try & Save 🤑",
                 "Get happy with up to 50% OFF from",
                 "select stores before 7 PM!",
-                34
+                51
             ),SizedBox(height: 30,),
             card(
                 "images/5.jpg",
-                "Happy Hour 🤩",
+                "Try Something New 🤑",
                 "Get happy with up to 50% OFF from",
                 "select stores before 7 PM!",
-                34
+                97
             ),SizedBox(height: 30,),
             card(
                 "images/1.jpg",
-                "Happy Hour 🤩",
+                "Local Favorites 🥧",
                 "Get happy with up to 50% OFF from",
                 "select stores before 7 PM!",
-                34
+                10
             ),SizedBox(height: 30,),
             card(
                 "images/2.jpg",
-                "Happy Hour 🤩",
+                "Get Free Meals",
                 "Get happy with up to 50% OFF from",
                 "select stores before 7 PM!",
-                34
+                54
             ),
 
 

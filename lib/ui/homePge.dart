@@ -1,5 +1,6 @@
 import 'package:carousel_images/carousel_images.dart';
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 import '/ui/detiles.dart';
 
 class HomePage extends StatefulWidget {
@@ -9,6 +10,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int _selectedIndex = 0;
+
+
   final List<String> listImages = [
     'images/50%.jpg',
     'images/discount.jpg',
@@ -37,21 +41,24 @@ class _HomePageState extends State<HomePage> {
           ),
           elevation: 0.7,
           actions: [
+
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text("توصيل الى ", style: TextStyle(color: Colors.black)),
+                Text("توصيل الى ", style: TextStyle(color: Colors.black,
+                    fontSize: 15,fontWeight: FontWeight.w700)),
                 Row(
                   children: [
                     Icon(
                       Icons.keyboard_arrow_down,
                       color: Colors.black,
                     ),
-                    Text("المنزل", style: TextStyle(color: Colors.black)),
+                    Text("المنزل", style: TextStyle(color: Colors.black,
+                        fontSize: 16,fontWeight: FontWeight.w900)),
                   ],
                 )
               ],
-            )
+            ),SizedBox(width:20,),
           ]),
       body: Container(
           height: MediaQuery.of(context).size.height,
@@ -110,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                                 style: TextStyle(
                                     color: Colors.green,
                                     fontSize: 20,
-                                    fontWeight: FontWeight.w900),
+                                    fontWeight: FontWeight.w800),
                               ),
                             ],
                           ),
@@ -239,15 +246,15 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                          height: 99,
-                          width: 99,
+                          height: 80,
+                          width: 150,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(20),
                             image: DecorationImage(
                               image: NetworkImage(
-                                  "https://cdn.iconfinder.com/icons/3759864/4227087/512/raster.png?token=1661420672-%2F%2F0HeIetAVbyBOmm8%2Fa5zouDzctqVH8kx22O%2B6yKoDE%3D",
-                                  scale: 10),
+                                "https://cdn.iconfinder.com/icons/1318010/1758390/256/raster.png?token=1662212284-1IbD9JDbuCPb8tsWXADIaDGUbkN6URXegBuBBOQoQHw%3D",
+                                  scale: 7),
                             ),
                             boxShadow: [
                               BoxShadow(
@@ -260,8 +267,8 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                           child: Padding(
-                            padding: EdgeInsets.only(top: 70, left: 34),
-                            child: Text("البقالة",
+                            padding: EdgeInsets.only(top: 55, left: 60),
+                            child: Text("متاجر",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                 )),
@@ -270,15 +277,15 @@ class _HomePageState extends State<HomePage> {
                         width: 20,
                       ),
                       Container(
-                          height: 99,
-                          width: 99,
+                          height: 80,
+                          width: 150,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(20),
                             image: DecorationImage(
                               image: NetworkImage(
-                                  "https://cdn.iconfinder.com/icons/6795599/7273782/256/raster.png?token=1661420449-%2B4aSduqdqtKIK%2BR2zyz3R9qV7NUmFaQFZL1ry4ChXkk%3D",
-                                  scale: 5),
+"https://cdn.iconfinder.com/icons/4025918/4494283/256/raster.png?token=1662212581-SMIzLjT%2FxW7jrm1qL%2BKM3W%2BsVT5qYqAm6JiZlb%2BON3g%3D"
+                                  ,scale: 6),
                             ),
                             boxShadow: [
                               BoxShadow(
@@ -291,43 +298,13 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                           child: Padding(
-                            padding: EdgeInsets.only(top: 70, left: 20),
+                            padding: EdgeInsets.only(top: 55, left: 50),
                             child: Text("توترز فريش",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                 )),
                           )),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Container(
-                          height: 99,
-                          width: 99,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  "https://cdn4.iconfinder.com/data/icons/food-icons/hamburger.png",
-                                  scale: 5),
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.5),
-                                spreadRadius: 5,
-                                blurRadius: 7,
-                                offset:
-                                Offset(0, 3), // changes position of shadow
-                              ),
-                            ],
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.only(top: 70, left: 34),
-                            child: Text("مطاعم",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                )),
-                          )),
+
                     ],
                   ),
                   SizedBox(
@@ -344,8 +321,39 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.circular(20),
                             image: DecorationImage(
                               image: NetworkImage(
-                                  "https://cdn.iconfinder.com/icons/731083/1154172/256/raster.png?token=1661421140-MpmhGzVtvGo%2Fg0qOAZmdEVqljMBPjf59el6SDszYLNk%3D",
+"https://cdn.iconfinder.com/icons/3594853/4061185/256/raster.png?token=1662212986-NGmKH9hUtpwv9Ku57KV7Bkh%2FjohBEDSdeBozJJjB2Rw%3D",
                                   scale: 5),
+                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 5,
+                                blurRadius: 7,
+                                offset:
+                                Offset(0, 3), // changes position of shadow
+                              ),
+                            ],
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(top: 70, left: 30),
+                            child: Text("المندوب",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                )),
+                          )),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Container(
+                          height: 99,
+                          width: 99,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                            image: DecorationImage(
+                              image: NetworkImage(
+"https://cdn.iconfinder.com/icons/731083/1154172/128/raster.png?token=1662213149-7BJhfcMrjZeurisoTmQWqabnmqVM%2FYj9dQ4V7hTlnA0%3D",
+                                  scale: 3),
                             ),
                             boxShadow: [
                               BoxShadow(
@@ -375,38 +383,7 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.circular(20),
                             image: DecorationImage(
                               image: NetworkImage(
-                                  "https://cdn.iconfinder.com/icons/4046407/4514852/512/raster.png?token=1661421425-XW90xk%2BRuR5z%2FPuRZhIvO74MPj%2BOD5mc5DO8WAqFAWk%3D",
-                                  scale: 10),
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.5),
-                                spreadRadius: 5,
-                                blurRadius: 7,
-                                offset:
-                                Offset(0, 3), // changes position of shadow
-                              ),
-                            ],
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.only(top: 70, left: 34),
-                            child: Text("المندوب",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                )),
-                          )),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Container(
-                          height: 99,
-                          width: 99,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  "https://cdn.iconfinder.com/icons/1318010/1758390/256/raster.png?token=1661421650-lQQfIYyiMGkKYEvcGdnpUrT5ixPcZyvPufGW8Bt4aCI%3D",
+"https://cdn.iconfinder.com/icons/2804679/3265947/256/raster.png?token=1662213394-U7iVa5r6e11%2B6x6yhJ%2BnPHQt9D1Nh95pv6bSJkyzOok%3D",
                                   scale: 5),
                             ),
                             boxShadow: [
@@ -420,8 +397,8 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                           child: Padding(
-                            padding: EdgeInsets.only(top: 70, left: 34),
-                            child: Text("متاجر",
+                            padding: EdgeInsets.only(top: 70, left: 25),
+                            child: Text("جوائز تورز",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                 )),
@@ -534,8 +511,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Image(
                               image: NetworkImage(
-                                  "https://cdn.iconfinder.com/icons/8170090/8748939/64/raster.png?token=1661414072-JllUnIO8Jq9iUh1SIDzIjBeYj82qcdFpUMPYJ28mJkQ%3D",
-                                  scale: 1)),
+"https://cdn.iconfinder.com/icons/8170090/8748939/64/raster.png?token=1662213562-Ke51zqHpR0svazx4LaUqU7F1U5h%2B9x8RJsjuHZ8QKHQ%3D",                                  scale: 1)),
                           Text(
                             "نمنميات",
                             style: TextStyle(
@@ -550,7 +526,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Image(
                               image: NetworkImage(
-                                  "https://cdn.iconfinder.com/icons/8170105/8748955/64/raster.png?token=1661414072-eYqRQUK92TcHvZkt3GW%2BSZkVFSOE0gLIBnvAt44nDNI%3D",
+                                  "https://cdn.iconfinder.com/icons/8170105/8748955/64/raster.png?token=1662213562-AOXzyjaiWWuAlMLvuas5%2BF%2FXuVJqDLxKogPhbYKc7K0%3D",
                                   scale: 1)),
                           Text(
                             "  غربي",
@@ -566,8 +542,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Image(
                               image: NetworkImage(
-                                  "https://cdn.iconfinder.com/icons/8170096/8748945/64/raster.png?token=1661414072-e7Jg33HnR%2FkHXeVxa3ifedqZJERsCXyhVbr8SHXQniI%3D",
-                                  scale: 1)),
+"https://cdn.iconfinder.com/icons/8170096/8748945/64/raster.png?token=1662213562-0qqGorhfvmbknFyMt3RAt4CypeFr6EEbx5VsmLnwxgI%3D",                                  scale: 1)),
                           Text(
                             "  تاكو",
                             style: TextStyle(
@@ -582,7 +557,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Image(
                               image: NetworkImage(
-                                  "https://cdn.iconfinder.com/icons/8170109/8748959/64/raster.png?token=1661414072-lsxe1bDuB0H1dM%2FCp2QMRxvZkM%2BbONv17euD1roqa24%3D",
+"https://cdn.iconfinder.com/icons/8170109/8748959/64/raster.png?token=1662213562-XhcF8c%2FY7SIkCNxgXJqybyq6FBuqZAJEp1W3Y1mlmvY%3D",
                                   scale: 1)),
                           Text(
                             "شاورما",
@@ -598,7 +573,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Image(
                               image: NetworkImage(
-                                  "https://cdn.iconfinder.com/icons/8170094/8748943/64/raster.png?token=1661414072-A7Dz1E6y7Lzis%2B5N3U2RO35l15%2FUV9Q8wwb4uHne5UA%3D",
+"https://cdn.iconfinder.com/icons/8170094/8748943/64/raster.png?token=1662213562-ve9qR0HfPC50yVz%2BkdBD18l37OLTcHjeYbVIhWG%2BVSk%3D",
                                   scale: 1)),
                           Text(
                             "عصائر",
@@ -614,7 +589,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Image(
                               image: NetworkImage(
-                                  "https://cdn.iconfinder.com/icons/8170092/8748941/64/raster.png?token=1661414072-u5mTCul2VMnAbp%2BWZMMPvsQ6guKXn0Y%2BiPMxMTKHRkI%3D",
+                                  "https://cdn.iconfinder.com/icons/8170092/8748941/64/raster.png?token=1662213562-PwsXkfzE5g3qSmTPV%2Fz4444HcOie6%2FDqQXXuLUBGnOQ%3D",
                                   scale: 1)),
                           Text(
                             "فاستفود",
@@ -630,7 +605,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Image(
                               image: NetworkImage(
-                                  "https://cdn.iconfinder.com/icons/8170101/8748950/64/raster.png?token=1661414072-YAfJVcG0O11aDaJyz1B0zBoXWqKfjSFkdzGGCq%2FvT2I%3D",
+                                  "https://cdn.iconfinder.com/icons/8170101/8748950/64/raster.png?token=1662213562-DF0TnkSpsRjK4IpLiAIK7O0JB5f7vm7yerbWQ4hZ2y4%3D",
                                   scale: 1)),
                           Text(
                             "   بيتزا",
@@ -646,7 +621,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Image(
                               image: NetworkImage(
-                                  "https://cdn.iconfinder.com/icons/8170103/8748952/256/raster.png?token=1661413297-iYkN5GrgXZbMDmn59mjTgDiKehjRSZl1eNRViveKUpI%3D",
+                                  "https://cdn.iconfinder.com/icons/8170103/8748952/256/raster.png?token=1662212416-mTSm06XbBvi9gbzN5TPr%2FVmR1iM6mUIzWBxRBqTdZzA%3D",
                                   scale: 4)),
                           Text(
                             "   برغر",
@@ -719,6 +694,7 @@ class _HomePageState extends State<HomePage> {
       //
       //   type: BottomNavigationBarType.fixed,
       //   backgroundColor: Colors.white,
+      //   selectedLabelStyle: TextStyle(color: Colors.green),
       //   currentIndex: 4,
       //   items: <BottomNavigationBarItem>[
       //
@@ -747,6 +723,62 @@ class _HomePageState extends State<HomePage> {
       //   ],
       //   selectedItemColor: Colors.white,
       // ),
+
+
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              blurRadius: 20,
+              color: Colors.black.withOpacity(.1),
+            )
+          ],
+        ),
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
+            child: GNav(
+              rippleColor: Colors.grey[300]!,
+              hoverColor: Colors.grey[100]!,
+              gap: 8,
+              activeColor: Colors.green,
+              iconSize: 24,
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              duration: Duration(milliseconds: 400),
+              tabBackgroundColor: Colors.grey[100]!,
+              color: Colors.black12,
+
+
+              tabs: [
+                GButton(
+                  icon: Icons.person_outline_rounded,
+                  text: 'حساب',
+                ),
+                GButton(
+                  icon: Icons.list_alt_sharp,
+                  text: 'طلبات',
+                ),
+                GButton(
+                  icon: Icons.search,
+                  text: 'بحث',
+                ),
+                GButton(
+
+                  icon: Icons.home,
+                  text: 'رئيسية',
+                ),
+              ],
+              selectedIndex: _selectedIndex,
+              onTabChange: (index) {
+                setState(() {
+                  _selectedIndex = index;
+                });
+              },
+            ),
+          ),
+        ),
+      ),
     );
   }
 
@@ -1024,136 +1056,6 @@ class _HomePageState extends State<HomePage> {
       ],
     );
   }
-  // Column week(String url, String name, String rate) {
-  //   return Column(
-  //     mainAxisAlignment: MainAxisAlignment.start,
-  //     crossAxisAlignment: CrossAxisAlignment.end,
-  //     children: [
-  //       Padding(
-  //         padding: EdgeInsets.only(bottom: 10),
-  //         child: Stack(
-  //           clipBehavior: Clip.none,
-  //           children: [
-  //             GestureDetector(
-  //                 child: Container(
-  //                     width: MediaQuery.of(context).size.width - 100,
-  //                     height: 170,
-  //                     decoration: BoxDecoration(
-  //                       borderRadius: BorderRadius.circular(15),
-  //                       image: DecorationImage(
-  //                           image: NetworkImage(
-  //                             url,
-  //                           ),
-  //                           fit: BoxFit.cover),
-  //                     )),
-  //                 onTap: () {
-  //                   Navigator.of(context)
-  //                       .push(MaterialPageRoute(builder: (context) => Detiles(rate: rate, url: url, name: name,)));
-  //                 }),
-  //             Positioned(
-  //               child: Container(
-  //                 width: 70,
-  //                 height: 40,
-  //                 decoration: BoxDecoration(
-  //                   borderRadius: BorderRadius.circular(7),
-  //                   color: Colors.white,
-  //                   boxShadow: [
-  //                     BoxShadow(
-  //                       color: Colors.grey.withOpacity(0.5),
-  //                       spreadRadius: 2,
-  //                       blurRadius: 5,
-  //                       offset: Offset(0, 3), // changes position of shadow
-  //                     ),
-  //                   ],
-  //                 ),
-  //                 child: Column(children: [
-  //                   Text(
-  //                     "طلب مسبق",
-  //                     style: TextStyle(color: Colors.grey, fontSize: 10),
-  //                   ),
-  //                   Text(
-  //                     "1:33  ص",
-  //                     style: TextStyle(fontWeight: FontWeight.w900, fontSize: 10),
-  //                   )
-  //                 ]),
-  //               ),
-  //               bottom: -10,
-  //               left: 10,
-  //             ),
-  //             Positioned(
-  //               child: Icon(
-  //                 Icons.favorite_border,
-  //                 color: Colors.white,
-  //               ),
-  //               left: 20,
-  //               top: 10,
-  //             )
-  //           ],
-  //         ),
-  //       ),
-  //       Column(
-  //         mainAxisAlignment: MainAxisAlignment.end,
-  //         crossAxisAlignment: CrossAxisAlignment.end,
-  //         children: [
-  //           Text(
-  //             name,
-  //             style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
-  //           ),
-  //           Text(
-  //             " عراقي.\$\$",
-  //             style: TextStyle(
-  //                 color: Colors.grey, fontSize: 15, fontWeight: FontWeight.w900),
-  //           ),
-  //           SizedBox(
-  //             height: 5,
-  //           ),
-  //           Row(
-  //             mainAxisAlignment: MainAxisAlignment.center,
-  //             children: [
-  //               Container(
-  //                 height: 30,
-  //                 width: 100,
-  //                 decoration: BoxDecoration(
-  //                   borderRadius: BorderRadius.circular(5),
-  //                   color: Color(0x649CBBFF),
-  //                 ),
-  //                 child:
-  //                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-  //                   Text("اكسب نقاط",
-  //                       style: TextStyle(
-  //                           fontSize: 10,
-  //                           color: Colors.blueAccent,
-  //                           fontWeight: FontWeight.w900)),
-  //                   Icon(
-  //                     Icons.add_circle_outline,
-  //                     color: Colors.blueAccent,
-  //                   )
-  //                 ]),
-  //               ),
-  //               SizedBox(
-  //                 width: 20,
-  //               ),
-  //               Container(
-  //                 height: 30,
-  //                 width: 70,
-  //                 decoration: BoxDecoration(
-  //                     borderRadius: BorderRadius.circular(5),
-  //                     color: Colors.black12),
-  //                 child:
-  //                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-  //                   Text(rate),
-  //                   Icon(
-  //                     Icons.star_rate_rounded,
-  //                     color: Colors.green,
-  //                   )
-  //                 ]),
-  //               ),
-  //             ],
-  //           ),
-  //         ],
-  //       ),
-  //     ],
-  //   );
-  // }
+
 }
 
