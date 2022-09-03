@@ -46,7 +46,7 @@ class _NavState extends State<Nav> {
               rippleColor: Colors.grey[300]!,
               hoverColor: Colors.grey[100]!,
               gap: 8,
-              activeColor: Colors.green,
+              activeColor: Color(0xFF02B793),
               iconSize: 24,
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               duration: Duration(milliseconds: 400),
@@ -59,19 +59,19 @@ class _NavState extends State<Nav> {
                 GButton(
 
                   icon: Icons.home,
-                  text: 'رئيسية',
+                  text: 'Home',
                 ),
                 GButton(
                   icon: Icons.search,
-                  text: 'بحث',
+                  text: 'Search',
                 ),
                 GButton(
                   icon: Icons.list_alt_sharp,
-                  text: 'طلبات',
+                  text: 'Orders',
                 ),
                 GButton(
                   icon: Icons.person_outline_rounded,
-                  text: 'حساب',
+                  text: 'Account',
                 ),
               ],
               selectedIndex: _selectedIndex,

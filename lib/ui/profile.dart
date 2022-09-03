@@ -34,14 +34,14 @@ class _ProfileState extends State<Profile> {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.card_giftcard,color: Colors.green,),
+                      Icon(Icons.card_giftcard,color: Color(0xFF02B793),),
                       SizedBox(width: 10),
                       Column(mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                         Text("Green",style: TextStyle(fontWeight: FontWeight.w500)),
                         Text("0 pts",style: TextStyle(color: Colors.grey),)
                       ],)
-                    ],),Icon(Icons.arrow_forward_ios,color: Colors.green,),],)),
+                    ],),Icon(Icons.arrow_forward_ios,color: Color(0xFF02B793),),],)),
               ),
               SizedBox(height: 20,),
 
@@ -97,7 +97,7 @@ Stack(children: [
                 Text("Language",style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500)),]),
         ],)),
   Positioned(right: 22,top: 5,child: Container(height: 25,width: 25,decoration: BoxDecoration(
-    borderRadius: BorderRadius.circular(12),color: Colors.green
+    borderRadius: BorderRadius.circular(12),color: Color(0xFF02B793),
   ),child: Center(child: Text("En",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),)),))
 ],),
 
@@ -120,7 +120,7 @@ Stack(children: [
                     Row(children: [
                       Text("Toters Cash",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 17)),
                       SizedBox(width: 10,),
-                      Icon(Icons.info_outline,color: Colors.green,),
+                      Icon(Icons.info_outline,color: Color(0xFF02B793),),
                     ],),
                     SizedBox(height: 10,),
                     Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -130,7 +130,7 @@ Stack(children: [
                           SizedBox(width: 10,),
                           Text("Wallet",style: TextStyle(fontWeight: FontWeight.w500),
                           )],
-                        ),Text("IQD 0",style: TextStyle(color: Colors.green,fontWeight: FontWeight.w900),)
+                        ),Text("IQD 0",style: TextStyle(color: Color(0xFF02B793),fontWeight: FontWeight.w900),)
                       ],),SizedBox(height: 10,),
                     Container(width: 350,height: 1,color: Colors.black12,),
                     SizedBox(height: 10,),
@@ -177,7 +177,7 @@ Stack(children: [
                               SizedBox(width: 10,),
                               Text("Credits",style: TextStyle(fontWeight: FontWeight.w500),),
                             ],
-                            ),Text("IQD 0",style: TextStyle(color: Colors.green,fontWeight: FontWeight.w900),)
+                            ),Text("IQD 0",style: TextStyle(color: Color(0xFF02B793),fontWeight: FontWeight.w900),)
                           ],),SizedBox(height: 10,),
                         Container(width: 350,height: 1,color: Colors.black12,),
                         SizedBox(height: 10,),
@@ -324,10 +324,6 @@ Image(image: AssetImage("images/refer_frind_icon.png"),height: 24.7,width: 24.7,
                       ])
                   )),
               SizedBox(height: 20,)
-
-
-
-
             ]))
 
       ],)

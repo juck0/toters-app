@@ -18,7 +18,7 @@ void main() {
   Widget build(BuildContext context) {
   return MaterialApp(
   debugShowCheckedModeBanner: false,
-  home:  Nav(),
+  home:  Splash(),
   );
   }
   }
