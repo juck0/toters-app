@@ -1,7 +1,10 @@
 import 'package:carousel_images/carousel_images.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:toters_app/ui/profile.dart';
+import 'package:toters_app/ui/search.dart';
 import '/ui/detiles.dart';
+import 'orderPage.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -10,8 +13,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _selectedIndex = 0;
-
 
   final List<String> listImages = [
     'images/50%.jpg',
@@ -724,61 +725,6 @@ class _HomePageState extends State<HomePage> {
       //   selectedItemColor: Colors.white,
       // ),
 
-
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              blurRadius: 20,
-              color: Colors.black.withOpacity(.1),
-            )
-          ],
-        ),
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
-            child: GNav(
-              rippleColor: Colors.grey[300]!,
-              hoverColor: Colors.grey[100]!,
-              gap: 8,
-              activeColor: Colors.green,
-              iconSize: 24,
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              duration: Duration(milliseconds: 400),
-              tabBackgroundColor: Colors.grey[100]!,
-              color: Colors.black12,
-
-
-              tabs: [
-                GButton(
-                  icon: Icons.person_outline_rounded,
-                  text: 'حساب',
-                ),
-                GButton(
-                  icon: Icons.list_alt_sharp,
-                  text: 'طلبات',
-                ),
-                GButton(
-                  icon: Icons.search,
-                  text: 'بحث',
-                ),
-                GButton(
-
-                  icon: Icons.home,
-                  text: 'رئيسية',
-                ),
-              ],
-              selectedIndex: _selectedIndex,
-              onTabChange: (index) {
-                setState(() {
-                  _selectedIndex = index;
-                });
-              },
-            ),
-          ),
-        ),
-      ),
     );
   }
 

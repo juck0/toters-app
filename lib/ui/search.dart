@@ -23,7 +23,7 @@ class _SearchState extends State<Search> {
                 ],),)),
             ),
           Container(width: MediaQuery.of(context).size.width,
-          height:  MediaQuery.of(context).size.height-63,
+          height:  MediaQuery.of(context).size.height-127,
           child:ListView(children: [
             Container(width: MediaQuery.of(context).size.width,
               height: 100,color: Color(0xFF02AD8B),
